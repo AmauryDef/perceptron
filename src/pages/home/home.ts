@@ -30,7 +30,7 @@ export class HomePage {
 	
 
   constructor(public navCtrl: NavController) {
-
+    
   }
 
   
@@ -40,7 +40,7 @@ export class HomePage {
   	global.poids = poids;
     global.n = this.n;
 
-  	if(global.poids.w0>0 && global.poids.w1>0 && global.poids.w2>0 && global.n>0){
+  	if(global.poids.w0!=0 && global.poids.w0 && global.poids.w1!=0 && global.poids.w1 && global.poids.w2!=0 && global.poids.w2 && global.n>0){
   		console.log(JSON.stringify(global.poids));
     	this.navCtrl.push(PerceptronPage);
   	}else{
