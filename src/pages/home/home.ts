@@ -26,6 +26,7 @@ export class HomePage {
 	w0:number;
 	w1:number;
 	w2:number;
+  n:number;
 	
 
   constructor(public navCtrl: NavController) {
@@ -37,8 +38,15 @@ export class HomePage {
   	let poids = new poidsModel(this.w0,this.w1,this.w2);
 
   	global.poids = poids;
+    global.n = this.n;
 
-    this.navCtrl.push(PerceptronPage);
+  	if(global.poids.w0>0 && global.poids.w1>0 && global.poids.w2>0 && global.n>0){
+  		console.log(JSON.stringify(global.poids));
+    	this.navCtrl.push(PerceptronPage);
+  	}else{
+  		alert("Failed to instantiate variables, you may have forgotten one or more variable : "+JSON.stringify(global.poids)+JSON.stringify(global.n) );
+  	}
+
   }
 
 }

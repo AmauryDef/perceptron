@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {global} from "../../app/global";
+import { global } from "../../app/global";
 import { LoadingController } from 'ionic-angular';
 
 
