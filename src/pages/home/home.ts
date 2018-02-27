@@ -35,10 +35,10 @@ export class HomePage {
 
   
   perceptronize() {
-  	let poids = new poidsModel(this.w0,this.w1,this.w2);
+  	let poids = new poidsModel(parseFloat(this.w0),parseFloat(this.w1),parseFloat(this.w2));
 
   	global.poids = poids;
-    global.n = this.n;
+    global.n = parseFloat(this.n);
 
   	if(global.poids.w0!=0 && global.poids.w0 && global.poids.w1!=0 && global.poids.w1 && global.poids.w2!=0 && global.poids.w2 && global.n>0){
   		console.log(JSON.stringify(global.poids));
