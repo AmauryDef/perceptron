@@ -93,7 +93,7 @@ export class PerceptronPage {
 
 			console.log(wArray);
 
-	    }while(wArray[etape].w0 == wArray[etape-1].w0 && wArray[etape].w1 == wArray[etape-1].w1 && wArray[etape].w2 == wArray[etape-1].w2);
+	    }while(wArray[etape].w0 === wArray[etape-1].w0 && wArray[etape].w1 === wArray[etape-1].w1 && wArray[etape].w2 === wArray[etape-1].w2);
 
 	    console.log(wArray);
 	    this.wArray=wArray;
