@@ -35,7 +35,8 @@ export class HomePage {
   }
 
   onChange(value){
-     console.log(value);
+    this.type = value
+     console.log(this.type);
   }
 
   
@@ -45,9 +46,16 @@ export class HomePage {
   	global.poids = poids;
     global.n = parseFloat(this.n);
 
-  	if(global.poids.w0!=0 && global.poids.w0 && global.poids.w1!=0 && global.poids.w1 && global.poids.w2!=0 && global.poids.w2 && global.n>0){
-  		console.log(JSON.stringify(global.poids));
-    	this.navCtrl.push(PerceptronPage);
+  	if(global.poids.w0!=0 && global.poids.w0 && global.poids.w1!=0 && global.poids.w1 && global.poids.w2!=0 && global.poids.w2 && global.n>0 && this.type){
+    	
+      if(this.type == "et"){
+        this.navCtrl.push(PerceptronPage);
+      }else if(this.type == "xor"){
+        alert("xor perceptron not yet implemented");
+      }else{
+        alert("Unknown ERROR");
+      }
+
   	}else{
   		alert("Failed to instantiate variables, you may have forgotten one or more variable : "+JSON.stringify(global.poids)+JSON.stringify(global.n) );
   	}

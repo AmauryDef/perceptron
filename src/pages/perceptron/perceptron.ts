@@ -59,7 +59,7 @@ export class PerceptronPage {
 				newWixi = newWixi + wArray[etape].w2;
 			}
 
-			wArray[etape].SomWiXi = newWixi;
+			wArray[etape].SomWiXi = Math.round(newWixi*100)/100;
 
 			//Déduction de la variable y à partir de la somme Wixi, si > 0, y =1, sinon y=0
 			if(newWixi >= 0){
@@ -82,6 +82,10 @@ export class PerceptronPage {
 			var newW0 = parseFloat(wArray[etape].w0) + (parseFloat(global.n) * (cible - y) * parseFloat(wArray[etape].entry[0]));
 			var newW1 = parseFloat(wArray[etape].w1) + (parseFloat(global.n) * (cible - y) * parseFloat(wArray[etape].entry[1]));
 			var newW2 = parseFloat(wArray[etape].w2) + (parseFloat(global.n) * (cible - y) * parseFloat(wArray[etape].entry[2]));
+
+			newW0 = Math.round(newW0*100)/100;
+			newW1 = Math.round(newW1*100)/100;
+			newW2 = Math.round(newW2*100)/100;
 
 			etape = etape + 1;
 
