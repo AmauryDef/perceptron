@@ -8,6 +8,62 @@
 
 <ion-content padding>
 
-  <p>{{wArray}}</p>
+    
+<ion-grid>
+  <ion-row align-items-start>
+    <ion-col>
+      Etape
+    </ion-col>
+    <ion-col>
+      W0
+    </ion-col>
+    <ion-col>
+      W1
+    </ion-col>
+    <ion-col>
+      W2
+    </ion-col>
+    <ion-col>
+      Entrée
+    </ion-col>
+    <ion-col>
+      ΣWiXi
+    </ion-col>
+    <ion-col>
+      y
+    </ion-col>
+    <ion-col>
+      cible
+    </ion-col>
+  </ion-row>
+
+  <ion-row align-items-start *ngFor="let item of wArray">
+    <ion-col>
+      {{item.etape}}
+    </ion-col>
+    <ion-col>
+      {{item.w0}}
+    </ion-col>
+    <ion-col>
+      {{item.w1}}
+    </ion-col>
+    <ion-col>
+      {{item.w2}}
+    </ion-col>
+    <ion-col>
+      {{item.entry[0]}}{{item.entry[1]}}{{item.entry[2]}}
+    </ion-col>
+    <ion-col>
+      {{item.SomWiXi}}
+    </ion-col>
+    <ion-col>
+      {{item.y}}
+    </ion-col>
+    <ion-col>
+      {{item.cible}}
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
 
 </ion-content>

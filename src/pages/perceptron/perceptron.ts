@@ -45,7 +45,7 @@ export class PerceptronPage {
 	    var entryIndex = 0;
 
 	    do{
-
+	    	wArray[etape].etape = etape;
 	    	wArray[etape].entry = entries[entryIndex];
 	    	//Calcul de la somme Wixi
 	    	var newWixi = 0;
@@ -96,7 +96,7 @@ export class PerceptronPage {
 
 			wArray.push({w0:newW0,w1:newW1,w2:newW2});
 
-			var previousStep = etape-1;
+			var previousStep = etape-2;
 
 			var check = 0;
 
@@ -116,9 +116,13 @@ export class PerceptronPage {
 
 	    wArray.splice(0,1);
 
+	    let long = wArray.length;
+
+	    wArray.splice(long-1,1)
+
 	    console.log(wArray);
 
-	    this.wArray=JSON.stringify(wArray);
+	    this.wArray=wArray;
 
   	}
 
