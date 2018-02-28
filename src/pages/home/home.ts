@@ -28,9 +28,14 @@ export class HomePage {
 	w2:number;
   n:number;
 	
+  type:any;
 
   constructor(public navCtrl: NavController) {
     
+  }
+
+  onChange(value){
+     console.log(value);
   }
 
   

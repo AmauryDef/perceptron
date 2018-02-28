@@ -10,6 +10,19 @@
   Bienvenue, cet outil va vous permettre de construire automatiquement vos perceptrons.
 
   <form id="page-form1" (ngSubmit)="perceptronize()">
+    
+    <h3 id="page-heading1" style="color:#000000;font-style:italic;text-align:center;">
+      Sélection du type de perceptron
+    </h3>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="type" [ngModelOptions]="{standalone:true}" (ionChange)="onChange($event);">
+        <ion-option value="et">ET</ion-option>
+        <ion-option value="xor">XOR</ion-option>
+      </ion-select>
+    </ion-item>
+
     <h3 id="page-heading1" style="color:#000000;font-style:italic;text-align:center;">
       Initialisation des poids
     </h3>
