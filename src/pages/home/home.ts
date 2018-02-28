@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { PerceptronPage } from '../perceptron/perceptron'
+import { PerceptronPage } from '../perceptron/perceptron';
+import { XorPage } from '../xor/xor';
 import {global} from "../../app/global";
 
 class poidsModel{
@@ -51,7 +52,7 @@ export class HomePage {
       if(this.type == "et"){
         this.navCtrl.push(PerceptronPage);
       }else if(this.type == "xor"){
-        alert("xor perceptron not yet implemented");
+        this.navCtrl.push(XorPage);
       }else{
         alert("Unknown ERROR");
       }

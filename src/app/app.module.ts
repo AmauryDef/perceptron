@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PerceptronPage } from '../pages/perceptron/perceptron';
+import { XorPage } from '../pages/xor/xor';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    PerceptronPage
+    PerceptronPage,
+    XorPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { PerceptronPage } from '../pages/perceptron/perceptron';
   entryComponents: [
     MyApp,
     HomePage,
-    PerceptronPage
+    PerceptronPage,
+    XorPage
   ],
   providers: [
     StatusBar,
